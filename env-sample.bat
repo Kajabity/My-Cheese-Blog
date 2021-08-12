@@ -10,5 +10,5 @@ set DB_USER=
 set DB_PWD=
 set DB_PREFIX=
 
-REM WordPress content location on local disk
+REM WordPress content location on local disk (use full path)
 set WP_CONTENT=

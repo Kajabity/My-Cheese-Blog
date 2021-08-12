@@ -41,6 +41,16 @@ docker run ^
     mysql:5.7
 
 REM -----------------------------------------------------------------------------------------------
+REM Create the content folder if it doesn't exist.
+REM -----------------------------------------------------------------------------------------------
+
+if not exist "%WP_CONTENT%" (
+    echo.
+    echo Creating content directory...
+    mkdir "%WP_CONTENT%"
+)
+
+REM -----------------------------------------------------------------------------------------------
 REM Create a WordPress container connected to the 'cheese_db' container
 REM -----------------------------------------------------------------------------------------------
 

@@ -66,7 +66,7 @@ REM The 'cheese' volume should still be there (unless uncommented above)
 REM -----------------------------------------------------------------------------------------------
 
 echo.
-echo Running containers:
+echo All containers including stopped (Exited):
 docker ps -a
 
 echo.

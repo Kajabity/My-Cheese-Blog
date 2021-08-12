@@ -43,7 +43,7 @@ REM The 'cheese' containers should have a status of 'Exited'
 REM -----------------------------------------------------------------------------------------------
 
 echo.
-echo Running containers:
+echo All containers including stopped (Exited):
 docker ps -a
 
 echo.
