@@ -1,3 +1,4 @@
-# My-Cheese-Blog
+My Cheese Blog
+==============
 
-Sample code for Developing WordPress in Docker and Docker Compose.
+Sample code for WordPress Development using Docker.
