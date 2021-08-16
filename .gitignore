@@ -7,3 +7,6 @@
 # Avoid checking in username and password details.
 .env
 env.bat
+
+# Working storage.
+/temp/
