@@ -31,10 +31,10 @@ echo Creating MySQL container...
 docker run ^
     --name cheese_db ^
     --network cheese_nw ^
-    --env MYSQL_ROOT_PASSWORD=%DB_ROOT_PWD% ^
-    --env MYSQL_DATABASE=%DB_NAME% ^
-    --env MYSQL_USER=%DB_USER% ^
-    --env MYSQL_PASSWORD=%DB_PWD% ^
+    --env "MYSQL_ROOT_PASSWORD=%DB_ROOT_PWD%" ^
+    --env "MYSQL_DATABASE=%DB_NAME%" ^
+    --env "MYSQL_USER=%DB_USER%" ^
+    --env "MYSQL_PASSWORD=%DB_PWD%" ^
     --publish 3306:3306 ^
     --volume cheese_data:/var/lib/mysql ^
     --detach ^
@@ -60,12 +60,12 @@ docker run ^
     --name cheese_web ^
     --network cheese_nw ^
     --publish 8080:80 ^
-    --volume %WP_CONTENT%:/var/www/html ^
-    --env WORDPRESS_DB_HOST=cheese_db ^
-    --env WORDPRESS_DB_NAME=%DB_NAME% ^
-    --env WORDPRESS_DB_USER=%DB_USER% ^
-    --env WORDPRESS_DB_PASSWORD=%DB_PWD% ^
-    --env WORDPRESS_TABLE_PREFIX=%DB_PREFIX% ^
+    --volume "%WP_CONTENT%:/var/www/html" ^
+    --env "WORDPRESS_DB_HOST=cheese_db" ^
+    --env "WORDPRESS_DB_NAME=%DB_NAME%" ^
+    --env "WORDPRESS_DB_USER=%DB_USER%" ^
+    --env "WORDPRESS_DB_PASSWORD=%DB_PWD%" ^
+    --env "WORDPRESS_TABLE_PREFIX=%DB_PREFIX%" ^
     --detach ^
     wordpress
 

@@ -1,12 +1,9 @@
-# Ignore the WordPress site contents - you might use a separate Git repository for this.
-/html/
-
-# Ignore IDE files.
-/.idea/
-
 # Avoid checking in username and password details.
 .env
 env.bat
 
-# Working storage.
-/temp/
+# Ignore the WordPress site contents - you might use a separate Git repository for this.
+/html/
+
+# Ignore IDE files – e.g., for JetBrains IntelliJ IDEA.
+/.idea/
